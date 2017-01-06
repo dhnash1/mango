@@ -4,7 +4,8 @@
   "description": "Project Purpose: To understand the way Document Databases function, and how to interact with them.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/kittyarcade/prime_peer_db_2016#readme",
   "dependencies": {
+    "angular": "^1.6.1",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "mongoose": "^4.7.6"
