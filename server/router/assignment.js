@@ -5,10 +5,28 @@ var User = require('../models/assignments');
 
 
 router.post("/post", function(req , res){
-  console.log(req.body.thing);
-  var math = req.body.thing * 5;
-  res.send({thingy: math});
+  var info = req.body;
+  console.log(info);
+  var newAssign = new User({
+    Student_Name : info.name,
+    Assignment_name : info.assign,
+    Score: info.score,
+    Date_Completed : info.date
 });
+
+newAssign.save(function(err){
+if(err){
+  console.log("damn, broken post");
+}else{
+  console.log("added");
+  res.send("put together");
+}
+
+});
+
+
+  });
+
 
 
 module.exports = router;

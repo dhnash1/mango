@@ -6,14 +6,19 @@ myApp.controller('Controller', ['$scope', '$http', function($scope, $http) {
   console.log("ANGULAR");
   $scope.run = function(x){
     console.log($scope.inputTest);
-    var box = {thing : $scope.inputTest};
+    var box = {
+      name : $scope.inputName,
+      assign: $scope.assignName,
+      score: $scope.score,
+      date: $scope.date
+    };
     console.log(box);
     $http({
          method: 'POST',
-         url: "/post",
+         url: "/router/post",
          data: box
      }).then(function(response) {
-         console.log("response:", response.data.thingy);
+         console.log("response:", response);
 
          // $scope.searchResults = response.data.Search;
      });
