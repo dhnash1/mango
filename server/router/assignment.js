@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var User = require('../models/assignments');
 
 
-router.post("/post", function(req , res){
+router.post("/", function(req , res){
   var info = req.body;
   console.log(info);
   var newAssign = new User({
@@ -27,6 +27,16 @@ if(err){
 
   });
 
+router.get('/', function(req, res){
+  User.find({}, function(err, userResults){
+    if(err){
+      console.log("BROKEN GET");
+    }else{
+      console.log("sending", userResults);
+      res.send(userResults);
+    }
+  });
+});
 
 
 module.exports = router;

@@ -14,6 +14,11 @@
   <input type="text" placeholder="Score" ng-model="score">
   <input type="text" placeholder="Date Completed" ng-model="date">
   <button type="button" name="button" ng-click="run()">TESTO</button>
+  <button type="button" name="button" ng-click="find()">GETTO</button>
+  <div ng-repeat="stuff in thwunk">
+    <p>  {{stuff.Student_Name}} ||| {{stuff.Assignment_name}} ||| {{stuff.Date_Completed}} ||| {{stuff.Score}} </p>
+  </div>
 </div>
+
   </body>
 </html>
