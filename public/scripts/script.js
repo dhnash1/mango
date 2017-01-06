@@ -30,6 +30,7 @@ myApp.controller('Controller', ['$scope', '$http', function($scope, $http) {
          data: box
      }).then(function(response) {
          console.log("response:", response);
+         $scope.find();
 
          // $scope.searchResults = response.data.Search;
      });

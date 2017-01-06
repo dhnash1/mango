@@ -3,18 +3,18 @@
   <head>
     <script type="text/javascript" src="vendors/angular.min.js"></script>
     <script type="text/javascript" src="scripts/script.js"></script>
+    <link rel="stylesheet" href="style.css">
     <meta charset="utf-8">
     <title>FRONK</title>
   </head>
   <body ng-app="myApp">
 <div ng-controller="Controller">
-  AAAH
+  <h1> Homework page </h1>
   <input type="text" placeholder="Student Name" ng-model="inputName" >
   <input type="text" placeholder="Assignment Name" ng-model="assignName">
   <input type="text" placeholder="Score" ng-model="score">
   <input type="text" placeholder="Date Completed" ng-model="date">
-  <button type="button" name="button" ng-click="run()">TESTO</button>
-  <button type="button" name="button" ng-click="find()">GETTO</button>
+  <button type="button" name="button" ng-click="run()">Add!</button>
   <div ng-repeat="stuff in thwunk">
     <p>  {{stuff.Student_Name}} ||| {{stuff.Assignment_name}} ||| {{stuff.Date_Completed}} ||| {{stuff.Score}} </p>
   </div>
